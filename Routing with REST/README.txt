@@ -1,3 +1,3 @@
 Module of routing. Handle with RESTful. To use it in your project you need to have installed composer and set autoload as "psr-4": { "src\\": ""}, where 'src' may be repleaced by your custom name(if you change it you must correct every namespace reference). If you find any mistakes, please let me know. 
 
-Modu³ routingu z obs³ug¹ RESTful. Aby u¿yæ go w projekcie wystarczy mieæ zainstalowanego composera z ustawionym autoloadingiem na "psr-4": { "src\\": ""}, gdzie 'src' mo¿e zostaæ zamienione na dowoln¹ nazwê(po zamianie musisz poprawiæ ka¿d¹ przestrzeñ nazw). Jeœli znajdziej jakikolwiek b³¹d, poinformuj mnie.
+ModuÅ‚ routingu z obsÅ‚ugÄ… RESTful. Aby uÅ¼yÄ‡ go w projekcie wystarczy mieÄ‡ zainstalowanego composera z ustawionym autoloadingiem na "psr-4": { "src\\": ""}, gdzie 'src' moÅ¼e zostaÄ‡ zamienione na dowolnÄ… nazwÄ™(po zamianie musisz poprawiÄ‡ kaÅ¼dÄ… przestrzeÅ„ nazw). JeÅ›li znajdziej jakikolwiek bÅ‚Ä…d, daj mi znaÄ‡.
