@@ -69,26 +69,26 @@ class Route implements IRoute
 
     public function setControllerName(string $controllerName): self
     {
-        $this->controllerSet[0] = $controllerName;
+        $this->controllerSet['name'] = $controllerName;
 
         return $this;
     }
 
     public function getControllerName(): string
     {
-        return $this->controllerSet[0] ?? NULL;
+        return $this->controllerSet['name'] ?? NULL;
     }
 
     public function setControllerMethod(string $controllerMethod): self
     {
-        $this->controllerSet[1] = $controllerMethod;
+        $this->controllerSet['method'] = $controllerMethod;
 
         return $this;
     }
 
     public function getControllerMethod(): string
     {
-        return $this->controllerSet[1] ?? NULL;
+        return $this->controllerSet['method'] ?? NULL;
     }
 
     public function setType(string $type): self
