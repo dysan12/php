@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Routing;
+namespace App\Routing;
 
 /**
  * Class DataRendering responsible for rendering data from URL and input stream.

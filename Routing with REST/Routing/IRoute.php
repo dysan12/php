@@ -1,9 +1,9 @@
 <?php
 
-namespace src\Routing;
+namespace App\Routing;
 
 
-use Webqms\Classes\Interfaces\ICollection;
+use App\Classes\Interfaces\ICollection;
 
 interface IRoute
 {

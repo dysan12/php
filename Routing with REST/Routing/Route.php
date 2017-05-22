@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Routing;
+namespace App\Routing;
 
 /**
  * Class Route responsible for defying route instances.

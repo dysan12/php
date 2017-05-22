@@ -1,9 +1,9 @@
 <?php
 
-namespace src\Routing;
+namespace App\Routing;
 
-use src\Exceptions\CollectionException;
-use src\Exceptions\NotFoundException;
+use App\Exceptions\CollectionException;
+use App\Exceptions\NotFoundException;
 
 /**
  * Class RouteMatching responsible for matching route from collection.

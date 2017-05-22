@@ -1,5 +1,5 @@
 <?php
-namespace src\Logs;
+namespace App\Logs;
 
 
 interface ILog

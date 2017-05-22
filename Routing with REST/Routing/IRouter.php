@@ -1,5 +1,5 @@
 <?php
-namespace src\Routing;
+namespace App\Routing;
 
 
 interface IRouter

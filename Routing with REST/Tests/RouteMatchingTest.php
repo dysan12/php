@@ -11,46 +11,46 @@ final class RouteMatchingTest extends TestCase
      */
     public function setUp()
     {
-        $collection = new \src\Routing\RoutesCollection();
+        $collection = new App\Routing\RoutesCollection();
 
-        $collection->addItem(new \src\Routing\Route('getUser', '/users/([\w%-]{1,30})', [
+        $collection->addItem(new App\Routing\Route('getUser', '/users/([\w%-]{1,30})', [
             'type' => 'resource',
             'requestMethod' => 'GET'
         ]));
-        $collection->addItem(new \src\Routing\Route('updateUser', '/users/([\w%-]{1,30})', [
+        $collection->addItem(new App\Routing\Route('updateUser', '/users/([\w%-]{1,30})', [
             'type' => 'resource',
             'requestMethod' => 'PUT'
         ]));
-        $collection->addItem(new \src\Routing\Route('deleteUser', '/users/([\w%-]{1,30})', [
+        $collection->addItem(new App\Routing\Route('deleteUser', '/users/([\w%-]{1,30})', [
             'type' => 'resource',
             'requestMethod' => 'DELETE'
         ]));
-        $collection->addItem(new \src\Routing\Route('newUser', '/users', [
+        $collection->addItem(new App\Routing\Route('newUser', '/users', [
             'type' => 'collection',
             'requestMethod' => 'POST'
         ]));
-        $collection->addItem(new \src\Routing\Route('getUsersCollection', '/users', [
+        $collection->addItem(new App\Routing\Route('getUsersCollection', '/users', [
             'type' => 'collection',
             'requestMethod' => 'GET'
         ]));
-        $collection->addItem(new \src\Routing\Route('deleteUsersCollection', '/users', [
+        $collection->addItem(new App\Routing\Route('deleteUsersCollection', '/users', [
             'type' => 'collection',
             'requestMethod' => 'DELETE'
         ]));
-        $collection->addItem(new \src\Routing\Route('aboutMe', '/aboutMe/?', [
+        $collection->addItem(new App\Routing\Route('aboutMe', '/aboutMe/?', [
             'type' => 'site',
             'requestMethod' => 'GET'
         ]));
-        $collection->addItem(new \src\Routing\Route('pageNotFound', '/404/?', [
+        $collection->addItem(new App\Routing\Route('pageNotFound', '/404/?', [
             'type' => 'site',
             'requestMethod' => 'GET'
         ]));
-        $collection->addItem(new \src\Routing\Route('index', '/?', [
+        $collection->addItem(new App\Routing\Route('index', '/?', [
             'type' => 'site',
             'requestMethod' => 'GET'
         ]));
 
-        $this->routeMatching = new \src\Routing\RouteMatching($collection->getCollection());
+        $this->routeMatching = new App\Routing\RouteMatching($collection->getCollection());
     }
     /**
      * @dataProvider arrayWithCustomUrls
@@ -100,7 +100,7 @@ final class RouteMatchingTest extends TestCase
 
     public function testCheckIf_MatchRouteByUrl_ThrowErrorIfRouteWasntFound()
     {
-        $this->expectException(\src\Exceptions\NotFoundException::class);
+        $this->expectException(App\Exceptions\NotFoundException::class);
 
         $this->routeMatching->matchRouteByUrl('/useeeeer/login');
     }

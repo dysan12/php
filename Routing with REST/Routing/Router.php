@@ -1,11 +1,10 @@
 <?php
 
-namespace src\Routing;
+namespace App\Routing;
 
-use src\Interfaces\ICollection;
-use src\Interfaces\ICreator;
-use src\Exceptions\CollectionException;
-use src\Exceptions\NotFoundException;
+use App\Logs\ICreator;
+use App\Exceptions\CollectionException;
+use App\Exceptions\NotFoundException;
 
 /**
  * Class Router controller. Initialize matching routes and extracting data from request.

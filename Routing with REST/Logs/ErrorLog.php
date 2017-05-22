@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Logs;
+namespace App\Logs;
 
 
 class ErrorLog implements ILog

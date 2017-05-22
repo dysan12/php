@@ -1,8 +1,6 @@
 <?php
 
-namespace src\Logs;
-
-use src\Interfaces\ICreator;
+namespace App\Logs;
 
 class LogsCreator implements ICreator
 {

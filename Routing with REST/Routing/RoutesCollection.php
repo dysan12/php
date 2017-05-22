@@ -1,8 +1,6 @@
 <?php
 
-namespace src\Routing;
-
-use src\Interfaces\ICollection;
+namespace App\Routing;
 
 /**
  * Class RoutesCollection collects routes.
