@@ -4,7 +4,7 @@ namespace App\Routing;
 
 /**
  * Class RoutesCollection collects routes.
- * @package Webqms\Routing
+ * @package App\Routing
  */
 class RoutesCollection implements ICollection
 {

@@ -21,7 +21,7 @@ $routesCollection->addItem(new App\Routing\Route('getUser', '/users/([\w%-]{1,30
 ]));
 
 $router = new App\Routing\Router($routesCollection, $globalVarsCollection, $logsCreator);
-$router->run('/' . $_SERVER['REQUEST_URI']);
+$router->run('/' . $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
 
 $route = $router->getMatchedRoute();
 $controller = new {$route->getControllerName()}();

@@ -7,7 +7,7 @@ use App\Exceptions\NotFoundException;
 
 /**
  * Class RouteMatching responsible for matching route from collection.
- * @package Webqms\Routing
+ * @package App\Routing
  */
 class RouteMatching implements IRouteMatching
 {

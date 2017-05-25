@@ -4,7 +4,7 @@ namespace App\Routing;
 
 /**
  * Class DataRendering responsible for rendering data from URL and input stream.
- * @package Webqms\Routing
+ * @package App\Routing
  */
 class DataRendering
 {

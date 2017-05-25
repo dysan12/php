@@ -4,7 +4,7 @@ namespace App\Routing;
 
 /**
  * Class Route responsible for defying route instances.
- * @package Webqms\Routing
+ * @package App\Routing
  */
 class Route implements IRoute
 {

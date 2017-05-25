@@ -8,7 +8,7 @@ use App\Exceptions\NotFoundException;
 
 /**
  * Class Router controller. Initialize matching routes and extracting data from request.
- * @package Webqms\Routing
+ * @package App\Routing
  */
 class Router
 {
