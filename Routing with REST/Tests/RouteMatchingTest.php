@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php
 
 use PHPUnit\Framework\TestCase;
 
@@ -55,7 +55,7 @@ final class RouteMatchingTest extends TestCase
     /**
      * @dataProvider arrayWithCustomUrls
      */
-    public function testIf_MatchRouteByUrl_CorrectlyReturnsRoutes(string $testingName, string $testingUrl, string $testingMethod)
+    public function testMatchingRoutesByUrl_WithProperData_ReturnsCorrectRoutes(string $testingName, string $testingUrl, string $testingMethod)
     {
         $this->assertEquals($testingName ,$this->routeMatching->matchRouteByUrl($testingUrl, $testingMethod)->getName());
     }
@@ -79,7 +79,7 @@ final class RouteMatchingTest extends TestCase
     /**
      * @dataProvider arrayWithValidNInvalidUrls
      */
-    public function testIf_getMostSimilarRoute_ReturnSimilarRoute(string $validUrl, string $invalidUrl)
+    public function testGetSimilarRoute_WithDistortedUrl_ReturnsSimilarRoutes(string $validUrl, string $invalidUrl)
     {
         $similarRouteUrl = $this->routeMatching->getMostSimilarRoute($invalidUrl)->getUrl();
         $similarRouteUrl = addcslashes($similarRouteUrl, '/');
@@ -98,7 +98,7 @@ final class RouteMatchingTest extends TestCase
         ];
     }
 
-    public function testCheckIf_MatchRouteByUrl_ThrowErrorIfRouteWasntFound()
+    public function testMatchingRouteByUrl_IfRouteWasntDefined_ThrowException()
     {
         $this->expectException(App\Exceptions\NotFoundException::class);
 
@@ -108,7 +108,7 @@ final class RouteMatchingTest extends TestCase
     /**
      * @dataProvider arrayWithSetOfNames
      */
-    public function testIf_MatchRouteByName_CorrectlyReturnsRoutes(string $testingName, string $testingUrl, string $testingMethod)
+    public function testMatchingRouteByName_WithCorrectNames_ReturnsRoutes(string $testingName, string $testingUrl, string $testingMethod)
     {
         $this->assertEquals($testingName ,$this->routeMatching->matchRouteByName($testingUrl, $testingMethod)->getName());
     }
@@ -120,5 +120,12 @@ final class RouteMatchingTest extends TestCase
             ['deleteUser', 'deleteUser', 'DELETE'],
             ['updateUser', 'updateUser', 'PUT']
         ];
+    }
+
+    public function testMatchingRouteByName_IfRouteWasntDefined_ThrowException()
+    {
+        $this->expectException(Currency\Exceptions\NotFoundException::class);
+
+        $this->routeMatching->matchRouteByName('whatever');
     }
 }

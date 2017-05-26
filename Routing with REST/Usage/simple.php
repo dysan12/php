@@ -2,8 +2,6 @@
 
 require 'vendor/autoload.php';
 
-
-
 $globalVarsCollection = new App\GlobalVars();
 $logsCreator = new App\Logs\LogsCreator();
 
@@ -21,7 +19,9 @@ $routesCollection->addItem(new App\Routing\Route('getUser', '/users/([\w%-]{1,30
 ]));
 
 $router = new App\Routing\Router($routesCollection, $globalVarsCollection, $logsCreator);
-$router->run('/' . $_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
+
+preg_match('/(?:domain.com)(.{0,70})/', $_SERVER['REQUEST_URI'], $matches);
+$router->run($matches[1], $_SERVER['REQUEST_METHOD']);
 
 $route = $router->getMatchedRoute();
 $controller = new {$route->getControllerName()}();
