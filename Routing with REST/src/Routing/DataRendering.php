@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Routing;
+namespace Currency\Routing;
 
 /**
  * Class DataRendering responsible for rendering data from URL and input stream.
- * @package App\Routing
+ * @package Rates\Routing
  */
 class DataRendering
 {
@@ -41,9 +41,9 @@ class DataRendering
     private function renderByRegex($url, $routeUrl): array
     {
         $routeRegexUrl = '/' . addcslashes($routeUrl, '/') . '/';
-        preg_match_all($routeRegexUrl, $url, $resources);
+        preg_match($routeRegexUrl, $url, $resources);
 
-        return $resources[1] ?? [];
+        return array_slice($resources, 1);
     }
 
     /**
